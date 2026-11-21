@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retro Clothing: prendas inspiradas en la moda de los años 80 y 90.">
+  <title>Retro Clothing | El armario de otra época</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>EL ARMARIO DE OTRA ÉPOCA</span>
+    <span class="top-message">Prendas con historia. Estilo sin fecha de caducidad.</span>
+    <span>EST. EN LOS 80 &amp; 90</span>
+  </div>
+
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Retro Clothing, inicio">
+      <span class="brand-star">✦</span>
+      <span class="brand-name">Retro</span>
+      <span class="brand-sub">C L O T H I N G</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="#inicio">INICIO</a>
+      <a href="#tienda">TIENDA</a>
+      <a href="#coleccion">COLECCIÓN</a>
+      <a href="#nosotros">NOSOTROS</a>
+      <a href="#contacto">CONTACTO</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Buscar">⌕</button>
+      <span class="action-divider"></span>
+      <button class="cart-button" id="cartButton" aria-label="Carrito">🛒 <span id="cartCount">(0)</span></button>
+    </div>
+  </header>
+
+  <main class="landing">
+    <section class="hero" aria-label="Presentación">
+      <div class="hero-copy">
+        <p class="eyebrow">CATÁLOGO DE PRENDAS &amp; ACCESORIOS</p>
+        <p class="handwritten intro-line">Los clásicos siempre vuelven</p>
+        <h1>EL ESTILO<br>DEL PASADO.<br>HOY.</h1>
+        <p class="hero-description">Descubre prendas únicas inspiradas en la moda<br class="desktop-only"> de los años 80 y 90.</p>
+        <button class="primary-button" data-panel="coleccion">EXPLORAR COLECCIÓN <span>→</span></button>
+        <p class="small-note"><span>✦</span> BUENAS PRENDAS. GRANDES HISTORIAS.</p>
+      </div>
+
+      <div class="hero-gallery">
+        <p class="gallery-caption handwritten">Tu próximo look tiene<br>historia.</p>
+        <span class="sparkle">✦</span>
+        <article class="photo-card card-one">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Jeans de estilo vintage">
+          <div class="photo-label"><span>Denim de toda la vida</span><small>EST. 90'S</small></div>
+        </article>
+        <article class="photo-card card-two">
+          <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Prendas de moda retro">
+          <div class="photo-label"><span>Entre cuadros</span><small>EST. 90'S</small></div>
+        </article>
+        <article class="photo-card card-three">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Bolso clásico">
+          <div class="photo-label"><span>Un toque de nostalgia</span><small>EST. 80'S</small></div>
+        </article>
+        <div class="era-stamp"><strong>80s &amp; 90s</strong><small>ESPÍRITU ORIGINAL</small></div>
+      </div>
+    </section>
+
+    <section class="category-strip">
+      <div class="category-heading">
+        <p class="eyebrow">EL BUEN GUSTO NO CADUCA</p>
+        <h2>Encuentra tu clásico.</h2>
+      </div>
+      <button class="category-link" data-panel="denim"><span>Denim &amp; básicos</span><em>El uniforme de los 90</em><b>↗</b></button>
+      <button class="category-link" data-panel="cuadros"><span>Chalecos &amp; cuadros</span><em>Actitud de otra época</em><b>↗</b></button>
+      <button class="category-link" data-panel="accesorios"><span>Vestidos &amp; accesorios</span><em>Detalles que cuentan historias</em><b>↗</b></button>
+    </section>
+  </main>
+
+  <div class="content-overlay" id="contentOverlay" aria-hidden="true">
+    <section class="content-window" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+      <button class="panel-close" id="panelClose" aria-label="Cerrar">✕</button>
+      <p class="eyebrow">RETRO CLOTHING · 80'S &amp; 90'S</p>
+      <h2 id="panelTitle">Nuestra colección</h2>
+      <div id="panelContent"></div>
+    </section>
+  </div>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="search-box"><input id="searchInput" type="search" placeholder="Busca una prenda..." aria-label="Buscar prendas"><button id="closeSearch" aria-label="Cerrar búsqueda">✕</button></div>
+    <p>Prueba con: jean, chaqueta o bolso.</p>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
